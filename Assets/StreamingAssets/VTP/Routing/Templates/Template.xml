@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<!DOCTYPE BranchPipingSolver SYSTEM "./BranchPipingSolver.dtd"> 
+
+<!-- contents 20170405  -->
+
+<BranchPipingSolver T="0" maxNumOfEdgesInTheSameDirection="8">
+
+
+
+
+<BranchPiping  pid='cflat' diameterOfPipe="0.5" clearance="0.05" diffuseColor="0 1 0"  maxLengthConstraintBetweenWayPoints="3000"> 
+	<Specification> test </Specification>
+	<PipingConstraintsAndCosts 
+		typeOfFluid="Air" 
+		typeOfFlow="pumpingFlow"
+		straightPipeCostPerLength="40"
+		discountRateForPipeRack="0.5"
+		interestRateForAisleSpace="3.0"
+		interestRateForGravitationalEffect="1.0"
+	>
+		<PropertyOfPipeBender
+			GraspMargin="0.5"
+			Radius="1"
+			AngleConstraint="only90degree"
+			bentPipeCostPerLength="0"
+			bentPipeCost="5"
+		/>
+		<PropertyOfPipeBender
+			GraspMargin="0.5"
+			Radius="0.5"
+			AngleConstraint="only90degree"
+			bentPipeCostPerLength="0"
+			bentPipeCost="5"
+		/>
+	</PipingConstraintsAndCosts>
+
+	<RootWayPoint>
+		<WayPoint  axis="Y_Axis" direction="-1" PropertyOfPipeBenderIndex="0" >
+			<DesignPoint
+		             pid="pipeOA_00start"
+		             position_x="20500"        position_y="12900"          position_z="3100"
+		               xAxis_vx="1"            xAxis_vy="0"                xAxis_vz="0"
+		               zAxis_vx="0"            zAxis_vy="0"                zAxis_vz="1"
+			/>
+		</WayPoint>
+	</RootWayPoint>
+
+	<LeafWayPoints>
+		<WayPoint  axis="X_Axis" direction="1" PropertyOfPipeBenderIndex="0" >
+			<DesignPoint
+			             pid="pipeOA_00end"
+			             position_x="16516"        position_y="2787"           position_z="3100"
+			               xAxis_vx="1"           xAxis_vy="0"                xAxis_vz="0"
+			               zAxis_vx="0"           zAxis_vy="0"                zAxis_vz="1"
+			/>
+		</WayPoint>
+	</LeafWayPoints>
+</BranchPiping>
+
+
+<Obstacle3D name="pillar 5x6=30" pipingSupportFeature="untouchable">
+
+<!-- 900x900 -->
+
+<Shape3D diffuseColor="0.5 0.5 0.5" emissiveColor="" transparency="0"> 
+
+<Box3D  x="0"      y="0"  z="2100" 
+ width_x="900"  width_y="900"  width_z="4200" />
+</Shape3D> 
+</Obstacle3D>
+
+
+</BranchPipingSolver>
+

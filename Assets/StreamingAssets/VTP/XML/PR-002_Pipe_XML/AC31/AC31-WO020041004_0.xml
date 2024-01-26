@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlantModel>
+	<PlantInformation SchemaVersion="3.2.0" OriginatingSystem="POD" Date="2009-01-01" Time="01:02:03" Is3D="yes" Units="mm" Discipline="Piping">
+		<UnitsOfMeasure Distance="m" Angle="Degree" Area="SquareMetre" Volume="CubicMetre" Temperature="DegreeCelsius" Pressure="Bar" Weight="Kilogram"/>
+	</PlantInformation>
+	<PipingNetworkSystem ID="PNSystem1" Tag="WO-020-0410-04-" Specification="A2AP">
+		<Extent>
+			<Min X="11874300.000000" Y="9370632.970000" Z="103502.500000"/>
+			<Max X="11874300.000000" Y="9370906.970000" Z="103697.500000"/>
+		</Extent>
+		<PipingNetworkSegment ID="PNSegment1" Tag="Segment1" Specification="A2AP">
+			<GenericAttributes Number="2">
+				<NominalDiameter Value="2.000000" Units="in"/>
+				<DirectionOfFlow Value="2"/>
+			</GenericAttributes>
+			<ProcessInstrument ID="XMP_4" ComponentClass="UNKNOWN-COMPONENT" StockNumber="020-LT-5064-DR">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11874300.000000" Y="9370879.970000" Z="103600.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11874300.000000" Y="9370906.970000" Z="103600.000000"/>
+						</Position>
+						<NominalDiameter Value="2.000000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11874300.000000" Y="9370852.970000" Z="103600.000000"/>
+						</Position>
+						<NominalDiameter Value="2.000000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</ProcessInstrument>
+		
+			<PipingComponent ID="XMP_18" ComponentClass="GateValve" StockNumber="P81C-002D6">
+				<Position>
+					<Location X="11874300.000000" Y="9370742.970000" Z="103600.000000"/>
+					<Axis X="0.000000" Y="0.000000" Z="1.000000"/>
+					<Reference X="0.000000" Y="-1.000000" Z="0.000000"/>
+				</Position>
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11874300.000000" Y="9370742.970000" Z="103600.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11874300.000000" Y="9370852.970000" Z="103600.000000"/>
+						</Position>
+						<NominalDiameter Value="2.000000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11874300.000000" Y="9370632.970000" Z="103600.000000"/>
+						</Position>
+						<NominalDiameter Value="2.000000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		</PipingNetworkSegment>
+		<PipingNetworkSegment ID="PNSegment2" Tag="Segment2" Specification="A2AP">
+			<GenericAttributes Number="1">
+				<NominalDiameter Value="0.500000" Units="in"/>
+			</GenericAttributes>
+			<PipingComponent ID="XMP_7" ComponentClass="PipingPlug" StockNumber="P30B-0002D">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11874300.000000" Y="9370879.970000" Z="103690.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11874300.000000" Y="9370879.970000" Z="103682.500000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11874300.000000" Y="9370879.970000" Z="103697.500000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		</PipingNetworkSegment>
+		<PipingNetworkSegment ID="PNSegment3" Tag="Segment3" Specification="A2AP">
+			<GenericAttributes Number="1">
+				<NominalDiameter Value="0.500000" Units="in"/>
+			</GenericAttributes>
+			<PipingComponent ID="XMP_12" ComponentClass="PipingPlug" StockNumber="P30B-0002D">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11874300.000000" Y="9370879.970000" Z="103510.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11874300.000000" Y="9370879.970000" Z="103517.500000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11874300.000000" Y="9370879.970000" Z="103502.500000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		</PipingNetworkSegment>
+	</PipingNetworkSystem>
+</PlantModel>

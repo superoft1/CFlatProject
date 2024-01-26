@@ -1,0 +1,78 @@
+{
+  "Equips": [
+    {
+      "Name": "From1",
+      "Diameter": 0.3048,
+      "NozzleKind": "HZ3",
+      "NozzleType": "Discharge",
+      "Pos": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "Name": "To1",
+      "Diameter": 0.3048,
+      "NozzleKind": "HZ1",
+      "NozzleType": "Suction",
+      "Pos": {
+        "x": 4,
+        "y": 3,
+        "z": 0
+      }
+    },
+    {
+      "Name": "From2",
+      "Diameter": 0.3048,
+      "NozzleKind": "HZ4",
+      "NozzleType": "Discharge",
+      "Pos": {
+        "x": 0,
+        "y": 5,
+        "z": 0
+      }
+    },
+    {
+      "Name": "To2",
+      "Diameter": 0.3048,
+      "NozzleKind": "HZ2",
+      "NozzleType": "Suction",
+      "Pos": {
+        "x": 4,
+        "y": 8,
+        "z": 0
+      }
+    }
+  ],
+  "Routes": [
+    {
+      "Name": "RouteX-X",
+      "Color": "Green",
+      "FluidPhase": "L",
+      "FromList": [
+        "From1"
+      ],
+      "ToList": [
+        "To1"
+      ],
+      "IsEndPointDirectionFix": true,
+      "IsRoutingPipeRacks": false,
+      "LineType": "P"
+    },
+    {
+      "Name": "RouteX-X2",
+      "Color": "Green",
+      "FluidPhase": "L",
+      "FromList": [
+        "From2"
+      ],
+      "ToList": [
+        "To2"
+      ],
+      "IsEndPointDirectionFix": true,
+      "IsRoutingPipeRacks": false,
+      "LineType": "P"
+    }
+  ]
+}

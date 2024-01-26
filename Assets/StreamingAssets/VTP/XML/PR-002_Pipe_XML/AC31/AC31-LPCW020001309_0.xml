@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlantModel>
+	<PlantInformation SchemaVersion="3.2.0" OriginatingSystem="POD" Date="2009-01-01" Time="01:02:03" Is3D="yes" Units="mm" Discipline="Piping">
+		<UnitsOfMeasure Distance="m" Angle="Degree" Area="SquareMetre" Volume="CubicMetre" Temperature="DegreeCelsius" Pressure="Bar" Weight="Kilogram"/>
+	</PlantInformation>
+	<PipingNetworkSystem ID="PNSystem1" Tag="LPCW-020-0013-09-" Specification="B2AS">
+		<Extent>
+			<Min X="11893670.500000" Y="9307437.500000" Z="103412.870000"/>
+			<Max X="11893670.500000" Y="9307564.750000" Z="103540.150000"/>
+		</Extent>
+		<PipingNetworkSegment ID="PNSegment1" Tag="Segment1" Specification="B2AS">
+			<GenericAttributes Number="1">
+				<NominalDiameter Value="0.500000" Units="in"/>
+			</GenericAttributes>
+			<Pipe ID="XMP_6" ComponentClass="Pipe" StockNumber="P01A-0010P">
+				<Association Type="refers to" ItemID="XMP_7"/>
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11893670.500000" Y="9307455.165000" Z="103522.475000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11893670.500000" Y="9307437.500000" Z="103540.150000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11893670.500000" Y="9307472.830000" Z="103504.800000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</Pipe>
+		
+			<Pipe ID="XMP_8" ComponentClass="Pipe" StockNumber="P01A-0010P">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11893670.500000" Y="9307490.505000" Z="103487.125000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11893670.500000" Y="9307472.830000" Z="103504.800000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11893670.500000" Y="9307508.180000" Z="103469.450000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</Pipe>
+		
+			<PipingComponent ID="XMP_10" ComponentClass="GateValve" StockNumber="P81B-0015N">
+				<Position>
+					<Location X="11893670.500000" Y="9307536.465000" Z="103441.160000"/>
+					<Axis X="-1.000000" Y="0.000000" Z="0.000000"/>
+					<Reference X="0.000000" Y="0.707044" Z="-0.707169"/>
+				</Position>
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11893670.500000" Y="9307536.465000" Z="103441.160000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11893670.500000" Y="9307508.180000" Z="103469.450000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11893670.500000" Y="9307564.750000" Z="103412.870000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		</PipingNetworkSegment>
+		<PipingNetworkSegment ID="PNSegment2" Tag="Segment2" Specification="B2AS">
+			<GenericAttributes Number="1">
+				<NominalDiameter Value="0.500000" Units="in"/>
+			</GenericAttributes></PipingNetworkSegment>
+	</PipingNetworkSystem>
+	<PipeSupport ID="XMP_7" Specification="B2AS" StockNumber="S501D-A0A">
+		<Position>
+			<Location X="11893670.500000" Y="9307472.830000" Z="103504.800000"/>
+			<Axis X="0.000000" Y="0.000000" Z="0.000000"/>
+			<Reference X="0.000000" Y="0.000000" Z="0.000000"/>
+		</Position>
+		<Association Type="is associated with" ItemID="XMP_6"/>
+		<NominalDiameter Value="0.500000" Units="in"/>
+		<ConnectionPoints NumPoints="1">
+			<Node>
+				<Position>
+					<Location X="11893670.500000" Y="9307472.830000" Z="103504.800000"/>
+					<Axis X="0.000000" Y="0.000000" Z="0.000000"/>
+					<Reference X="0.000000" Y="0.000000" Z="0.000000"/>
+				</Position>
+			</Node>
+		</ConnectionPoints>
+	</PipeSupport>
+</PlantModel>

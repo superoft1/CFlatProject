@@ -1,0 +1,111 @@
+{
+  "Equips": [
+    {
+      "Diameter": 0.3,
+      "Name": "EquipFrom1",
+      "NozzleKind": "HZ1",
+      "NozzleType": "Discharge",
+      "Pos": {
+        "x": 5,
+        "y": 30,
+        "z": 1.5
+      }
+    },
+    {
+      "Diameter": 0.3,
+      "Name": "EquipTo1",
+      "NozzleKind": "HZ3",
+      "NozzleType": "Suction",
+      "Pos": {
+        "x": 20,
+        "y": 100,
+        "z": 5.91
+      }
+    },
+    {
+      "Diameter": 0.3,
+      "Name": "EquipTo2",
+      "NozzleKind": "HZ3",
+      "NozzleType": "Suction",
+      "Pos": {
+        "x": 20,
+        "y": 40,
+        "z": 8
+      }
+    },
+    {
+      "Diameter": 0.15,
+      "Name": "EquipTo3",
+      "NozzleKind": "HZ3",
+      "NozzleType": "Suction",
+      "Pos": {
+        "x": 20,
+        "y": 50,
+        "z": 8
+      }
+    },
+    {
+      "Diameter": 0.1,
+      "Name": "EquipTo4",
+      "NozzleKind": "HZ3",
+      "NozzleType": "Suction",
+      "Pos": {
+        "x": 20,
+        "y": 60,
+        "z": 8
+      }
+    },
+    {
+      "Diameter": 0.015,
+      "Name": "EquipTo5",
+      "NozzleKind": "HZ3",
+      "NozzleType": "Suction",
+      "Pos": {
+        "x": 20,
+        "y": 70,
+        "z": 8
+      }
+    }
+  ],
+  "Racks": [
+    {
+      "Name": "PipeRack1",
+      "BeamInterval": 6,
+      "BeamThickness": 0.2,
+      "ColumnThickness": 0.2,
+      "Floors": [
+        6,
+        4
+      ],
+      "IntervalNumber": 12,
+      "Position": {
+        "x": 10,
+        "y": 20,
+        "z": 0
+      },
+      "Rotation": 0,
+      "SideBeamThickness": 0.2,
+      "Width": 6
+    }
+  ],
+  "Routes": [
+    {
+      "Color": "Green",
+      "FluidPhase": "L",
+      "FromList": [
+        "EquipFrom1"
+      ],
+      "IsEndPointDirectionFix": true,
+      "IsRoutingPipeRacks": true,
+      "LineType": "P",
+      "Name": "Route1",
+      "ToList": [
+        "EquipTo1",
+        "EquipTo2",
+        "EquipTo3",
+        "EquipTo4",
+        "EquipTo5"
+      ]
+    }
+  ]
+}

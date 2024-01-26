@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlantModel>
+	<PlantInformation SchemaVersion="3.2.0" OriginatingSystem="POD" Date="2009-01-01" Time="01:02:03" Is3D="yes" Units="mm" Discipline="Piping">
+		<UnitsOfMeasure Distance="m" Angle="Degree" Area="SquareMetre" Volume="CubicMetre" Temperature="DegreeCelsius" Pressure="Bar" Weight="Kilogram"/>
+	</PlantInformation>
+	<PipingNetworkSystem ID="PNSystem1" Tag="P-020-2201-02-" Specification="B1AQ02">
+		<Extent>
+			<Min X="11884672.130000" Y="9332212.350000" Z="101027.800000"/>
+			<Max X="11893190.770000" Y="9332920.970000" Z="103910.270000"/>
+		</Extent>
+		<PipingNetworkSegment ID="PNSegment1" Tag="Segment1" Specification="B1AQ02">
+			<GenericAttributes Number="1">
+				<NominalDiameter Value="8.000000" Units="in"/>
+			</GenericAttributes>
+			<Pipe ID="XMP_6" ComponentClass="Pipe" StockNumber="P01A-001AT">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11884672.130000" Y="9332212.350000" Z="102216.265000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11884672.130000" Y="9332212.350000" Z="101027.800000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11884672.130000" Y="9332212.350000" Z="103404.730000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</Pipe>
+		
+			<PipingComponent ID="XMP_8" ComponentClass="PipingElbow90" StockNumber="P02A-000GZ">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11884672.130000" Y="9332212.350000" Z="103709.520000"/>
+							<Axis X="0.000000" Y="0.000000" Z="-1.000000"/>
+							<Reference X="-0.707123" Y="-0.707090" Z="0.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11884672.130000" Y="9332212.350000" Z="103404.730000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11884887.650000" Y="9332427.860000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		
+			<Pipe ID="XMP_12" ComponentClass="Pipe" StockNumber="P01A-001AT">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11884988.465000" Y="9332528.685000" Z="103709.520000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11884887.650000" Y="9332427.860000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11885089.280000" Y="9332629.510000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</Pipe>
+		
+			<Pipe ID="XMP_25" ComponentClass="Pipe" StockNumber="P01A-001AT">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11885190.105000" Y="9332730.335000" Z="103709.520000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11885089.280000" Y="9332629.510000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11885290.930000" Y="9332831.160000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</Pipe>
+		
+			<PipingComponent ID="XMP_27" ComponentClass="PipingElbow45" StockNumber="P03A-000EX">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11885380.730000" Y="9332920.930000" Z="103709.520000"/>
+							<Axis X="-0.707225" Y="-0.706989" Z="0.000000"/>
+							<Reference X="-1.000000" Y="0.000000" Z="0.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11885290.930000" Y="9332831.160000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11885507.720000" Y="9332920.930000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		
+			<Pipe ID="XMP_31" ComponentClass="Pipe" StockNumber="P01A-001AT">
+				<Association Type="refers to" ItemID="XMP_32"/>
+				<Association Type="refers to" ItemID="XMP_34"/>
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11887113.360000" Y="9332920.950000" Z="103709.520000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11885507.720000" Y="9332920.930000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11888719.000000" Y="9332920.970000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</Pipe>
+		
+			<Pipe ID="XMP_35" ComponentClass="Pipe" StockNumber="P01A-001AT">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11889884.385000" Y="9332920.950000" Z="103709.520000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11888719.000000" Y="9332920.970000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891049.770000" Y="9332920.930000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</Pipe>
+		
+			<PipingComponent ID="XMP_37" ComponentClass="WeldNeckFlange" StockNumber="P66B-0084F">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891106.260000" Y="9332920.970000" Z="103709.520000"/>
+							<Axis X="1.000000" Y="0.000000" Z="0.000000"/>
+							<Reference X="1.000000" Y="0.000000" Z="0.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891162.750000" Y="9332920.970000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891049.770000" Y="9332920.970000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		
+			<ProcessInstrument ID="XMP_63" ComponentClass="UNKNOWN-COMPONENT" StockNumber="020-FE-1006">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891167.750000" Y="9332920.970000" Z="103709.520000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891162.750000" Y="9332920.970000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891172.750000" Y="9332920.970000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</ProcessInstrument>
+		
+			<PipingComponent ID="XMP_67" ComponentClass="WeldNeckFlange" StockNumber="P66B-00847">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891229.235000" Y="9332920.970000" Z="103709.520000"/>
+							<Axis X="-1.000000" Y="0.000000" Z="0.000000"/>
+							<Reference X="-1.000000" Y="0.000000" Z="0.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891172.750000" Y="9332920.970000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891285.720000" Y="9332920.970000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		
+			<Pipe ID="XMP_94" ComponentClass="Pipe" StockNumber="P01A-001AT">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11892085.850000" Y="9332920.970000" Z="103709.520000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891285.720000" Y="9332920.970000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11892885.980000" Y="9332920.970000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</Pipe>
+		
+			<PipingComponent ID="XMP_96" ComponentClass="PipingElbow90" StockNumber="P02A-000GZ">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11893190.770000" Y="9332920.970000" Z="103709.520000"/>
+							<Axis X="-1.000000" Y="0.000000" Z="0.000000"/>
+							<Reference X="0.000000" Y="0.000000" Z="1.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11892885.980000" Y="9332920.970000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11893190.770000" Y="9332920.970000" Z="103404.730000"/>
+						</Position>
+						<NominalDiameter Value="8.000000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		
+			<PipingComponent ID="XMP_16" ComponentClass="WeldOlet" StockNumber="P31B-00Y4E">
+				<ConnectionPoints NumPoints="4">
+					<Node>
+						<Position>
+							<Location X="11885089.280000" Y="9332629.510000" Z="103709.520000"/>
+							<Axis X="0.000000" Y="0.000000" Z="0.000000"/>
+							<Reference X="0.000000" Y="0.000000" Z="-1.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11885089.280000" Y="9332629.510000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.750000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11885089.280000" Y="9332629.510000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.750000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11885089.280000" Y="9332629.510000" Z="103841.260000"/>
+						</Position>
+						<NominalDiameter Value="0.750000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		</PipingNetworkSegment>
+		<PipingNetworkSegment ID="PNSegment2" Tag="Segment2" Specification="B1AQ02">
+			<GenericAttributes Number="1">
+				<NominalDiameter Value="0.750000" Units="in"/>
+			</GenericAttributes>
+			<PipingComponent ID="XMP_18" ComponentClass="WeldNeckFlange" StockNumber="P61B-0032X">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11885089.280000" Y="9332629.510000" Z="103870.830000"/>
+							<Axis X="0.000000" Y="0.000000" Z="1.000000"/>
+							<Reference X="0.000000" Y="0.000000" Z="1.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11885089.280000" Y="9332629.510000" Z="103900.400000"/>
+						</Position>
+						<NominalDiameter Value="0.750000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11885089.280000" Y="9332629.510000" Z="103841.260000"/>
+						</Position>
+						<NominalDiameter Value="0.750000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		
+			<PipingComponent ID="XMP_21" ComponentClass="BlindFlange" StockNumber="P67B-000GJ">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11885089.280000" Y="9332629.510000" Z="103905.335000"/>
+							<Axis X="0.000000" Y="0.000000" Z="1.000000"/>
+							<Reference X="0.000000" Y="0.000000" Z="1.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11885089.280000" Y="9332629.510000" Z="103910.270000"/>
+						</Position>
+						<NominalDiameter Value="0.750000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11885089.280000" Y="9332629.510000" Z="103900.400000"/>
+						</Position>
+						<NominalDiameter Value="0.750000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		</PipingNetworkSegment>
+		<PipingNetworkSegment ID="PNSegment3" Tag="Segment3" Specification="B1AQ02">
+			<GenericAttributes Number="1">
+				<NominalDiameter Value="0.500000" Units="in"/>
+			</GenericAttributes>
+			<Pipe ID="XMP_40" ComponentClass="Pipe" StockNumber="P01A-000XM">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891140.180000" Y="9332694.020000" Z="103709.520000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891140.180000" Y="9332744.020000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891140.180000" Y="9332644.020000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</Pipe>
+		
+			<PipingComponent ID="XMP_42" ComponentClass="PipingElbow45" StockNumber="P03A-0018K">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891140.170000" Y="9332628.270000" Z="103709.520000"/>
+							<Axis X="0.000635" Y="1.000000" Z="0.000000"/>
+							<Reference X="0.707107" Y="0.707107" Z="0.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891140.180000" Y="9332644.020000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891129.050000" Y="9332617.150000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		
+			<Pipe ID="XMP_45" ComponentClass="Pipe" StockNumber="P01A-000XM">
+				<Association Type="refers to" ItemID="XMP_46"/>
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891111.375000" Y="9332599.475000" Z="103709.520000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891129.050000" Y="9332617.150000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891093.700000" Y="9332581.800000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</Pipe>
+		
+			<Pipe ID="XMP_47" ComponentClass="Pipe" StockNumber="P01A-000XM">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891076.025000" Y="9332564.125000" Z="103709.520000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891093.700000" Y="9332581.800000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891058.350000" Y="9332546.450000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</Pipe>
+		
+			<PipingComponent ID="XMP_49" ComponentClass="PipingElbow45" StockNumber="P03A-0018K">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891047.210000" Y="9332535.300000" Z="103709.520000"/>
+							<Axis X="0.706789" Y="0.707424" Z="0.000000"/>
+							<Reference X="0.000000" Y="1.000000" Z="0.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891058.350000" Y="9332546.450000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891047.210000" Y="9332519.560000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		
+			<PipingComponent ID="XMP_52" ComponentClass="WeldNeckFlange" StockNumber="P61B-0032Z">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891047.210000" Y="9332492.410000" Z="103709.520000"/>
+							<Axis X="0.000000" Y="-1.000000" Z="0.000000"/>
+							<Reference X="0.000000" Y="-1.000000" Z="0.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891047.210000" Y="9332465.260000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891047.210000" Y="9332519.560000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		
+			<PipingComponent ID="XMP_55" ComponentClass="GateValve" StockNumber="P81B-001TK">
+				<Position>
+					<Location X="11891047.210000" Y="9332393.260000" Z="103709.520000"/>
+					<Axis X="-1.000000" Y="0.000000" Z="0.000000"/>
+					<Reference X="0.000000" Y="-1.000000" Z="0.000000"/>
+				</Position>
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891047.210000" Y="9332393.260000" Z="103709.520000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891047.210000" Y="9332465.260000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891047.210000" Y="9332321.260000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		
+			<PipingComponent ID="XMP_58" ComponentClass="Flange" StockNumber="P61B-003U3">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891047.210000" Y="9332318.440000" Z="103709.520000"/>
+							<Axis X="0.000000" Y="1.000000" Z="0.000000"/>
+							<Reference X="0.000000" Y="1.000000" Z="0.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891047.210000" Y="9332321.260000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891047.210000" Y="9332315.620000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		</PipingNetworkSegment>
+		<PipingNetworkSegment ID="PNSegment4" Tag="Segment4" Specification="B1AQ02">
+			<GenericAttributes Number="1">
+				<NominalDiameter Value="0.500000" Units="in"/>
+			</GenericAttributes>
+			<Pipe ID="XMP_70" ComponentClass="Pipe" StockNumber="P01A-000XM">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891195.310000" Y="9332694.030000" Z="103709.520000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891195.310000" Y="9332744.030000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891195.310000" Y="9332644.030000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</Pipe>
+		
+			<PipingComponent ID="XMP_72" ComponentClass="PipingElbow45" StockNumber="P03A-0018K">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891195.320000" Y="9332628.280000" Z="103709.520000"/>
+							<Axis X="-0.000635" Y="1.000000" Z="0.000000"/>
+							<Reference X="-0.707425" Y="0.706789" Z="0.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891195.310000" Y="9332644.030000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891206.450000" Y="9332617.160000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		
+			<Pipe ID="XMP_75" ComponentClass="Pipe" StockNumber="P01A-000XM">
+				<Association Type="refers to" ItemID="XMP_76"/>
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891224.115000" Y="9332599.485000" Z="103709.520000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891206.450000" Y="9332617.160000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891241.780000" Y="9332581.810000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</Pipe>
+		
+			<Pipe ID="XMP_77" ComponentClass="Pipe" StockNumber="P01A-000XM">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891259.455000" Y="9332564.135000" Z="103709.520000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891241.780000" Y="9332581.810000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891277.130000" Y="9332546.460000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</Pipe>
+		
+			<PipingComponent ID="XMP_79" ComponentClass="PipingElbow45" StockNumber="P03A-0018K">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891288.260000" Y="9332535.310000" Z="103709.520000"/>
+							<Axis X="-0.706472" Y="0.707741" Z="0.000000"/>
+							<Reference X="0.000000" Y="1.000000" Z="0.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891277.130000" Y="9332546.460000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891288.260000" Y="9332519.570000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		
+			<PipingComponent ID="XMP_82" ComponentClass="WeldNeckFlange" StockNumber="P61B-0032Z">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891288.260000" Y="9332492.420000" Z="103709.520000"/>
+							<Axis X="0.000000" Y="-1.000000" Z="0.000000"/>
+							<Reference X="0.000000" Y="-1.000000" Z="0.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891288.260000" Y="9332465.270000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891288.260000" Y="9332519.570000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		
+			<PipingComponent ID="XMP_85" ComponentClass="GateValve" StockNumber="P81B-001TK">
+				<Position>
+					<Location X="11891288.260000" Y="9332393.270000" Z="103709.520000"/>
+					<Axis X="1.000000" Y="0.000000" Z="0.000000"/>
+					<Reference X="0.000000" Y="-1.000000" Z="0.000000"/>
+				</Position>
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891288.260000" Y="9332393.270000" Z="103709.520000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891288.260000" Y="9332465.270000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891288.260000" Y="9332321.270000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		
+			<PipingComponent ID="XMP_88" ComponentClass="Flange" StockNumber="P61B-003U3">
+				<ConnectionPoints NumPoints="3">
+					<Node>
+						<Position>
+							<Location X="11891288.260000" Y="9332318.460000" Z="103709.520000"/>
+							<Axis X="0.000000" Y="1.000000" Z="0.000000"/>
+							<Reference X="0.000000" Y="1.000000" Z="0.000000"/>
+						</Position>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891288.260000" Y="9332321.270000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+					<Node>
+						<Position>
+							<Location X="11891288.260000" Y="9332315.650000" Z="103709.520000"/>
+						</Position>
+						<NominalDiameter Value="0.500000" Units="in"/>
+					</Node>
+				</ConnectionPoints>
+			</PipingComponent>
+		</PipingNetworkSegment>
+	</PipingNetworkSystem>
+	<PipeSupport ID="XMP_32" Specification="B1AQ02" StockNumber="S110X-A08-0200-0100">
+		<Position>
+			<Location X="11888719.000000" Y="9332920.970000" Z="103709.520000"/>
+			<Axis X="0.000000" Y="0.000000" Z="0.000000"/>
+			<Reference X="0.000000" Y="0.000000" Z="0.000000"/>
+		</Position>
+		<Association Type="is associated with" ItemID="XMP_31"/>
+		<NominalDiameter Value="8.000000" Units="in"/>
+		<ConnectionPoints NumPoints="1">
+			<Node>
+				<Position>
+					<Location X="11888719.000000" Y="9332920.970000" Z="103709.520000"/>
+					<Axis X="0.000000" Y="0.000000" Z="0.000000"/>
+					<Reference X="0.000000" Y="0.000000" Z="0.000000"/>
+				</Position>
+			</Node>
+		</ConnectionPoints>
+	</PipeSupport>
+	<PipeSupport ID="XMP_34" Specification="B1AQ02" StockNumber="S170X-Z08">
+		<Position>
+			<Location X="11888719.000000" Y="9332920.970000" Z="103709.520000"/>
+			<Axis X="0.000000" Y="0.000000" Z="0.000000"/>
+			<Reference X="0.000000" Y="0.000000" Z="0.000000"/>
+		</Position>
+		<Association Type="is associated with" ItemID="XMP_31"/>
+		<NominalDiameter Value="8.000000" Units="in"/>
+		<ConnectionPoints NumPoints="1">
+			<Node>
+				<Position>
+					<Location X="11888719.000000" Y="9332920.970000" Z="103709.520000"/>
+					<Axis X="0.000000" Y="0.000000" Z="0.000000"/>
+					<Reference X="0.000000" Y="0.000000" Z="0.000000"/>
+				</Position>
+			</Node>
+		</ConnectionPoints>
+	</PipeSupport>
+	<PipeSupport ID="XMP_46" Specification="B1AQ02" StockNumber="S501D-A0A">
+		<Position>
+			<Location X="11891093.700000" Y="9332581.800000" Z="103709.520000"/>
+			<Axis X="0.000000" Y="0.000000" Z="0.000000"/>
+			<Reference X="0.000000" Y="0.000000" Z="0.000000"/>
+		</Position>
+		<Association Type="is associated with" ItemID="XMP_45"/>
+		<NominalDiameter Value="0.500000" Units="in"/>
+		<ConnectionPoints NumPoints="1">
+			<Node>
+				<Position>
+					<Location X="11891093.700000" Y="9332581.800000" Z="103709.520000"/>
+					<Axis X="0.000000" Y="0.000000" Z="0.000000"/>
+					<Reference X="0.000000" Y="0.000000" Z="0.000000"/>
+				</Position>
+			</Node>
+		</ConnectionPoints>
+	</PipeSupport>
+	<PipeSupport ID="XMP_76" Specification="B1AQ02" StockNumber="S501D-A0A">
+		<Position>
+			<Location X="11891241.780000" Y="9332581.810000" Z="103709.520000"/>
+			<Axis X="0.000000" Y="0.000000" Z="0.000000"/>
+			<Reference X="0.000000" Y="0.000000" Z="0.000000"/>
+		</Position>
+		<Association Type="is associated with" ItemID="XMP_75"/>
+		<NominalDiameter Value="0.500000" Units="in"/>
+		<ConnectionPoints NumPoints="1">
+			<Node>
+				<Position>
+					<Location X="11891241.780000" Y="9332581.810000" Z="103709.520000"/>
+					<Axis X="0.000000" Y="0.000000" Z="0.000000"/>
+					<Reference X="0.000000" Y="0.000000" Z="0.000000"/>
+				</Position>
+			</Node>
+		</ConnectionPoints>
+	</PipeSupport>
+</PlantModel>
