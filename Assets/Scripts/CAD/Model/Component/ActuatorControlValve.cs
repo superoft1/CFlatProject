@@ -17,15 +17,20 @@ namespace Chiyoda.CAD.Model
 
         public ConnectPoint Term1ConnectPoint => GetConnectPoint( (int)ConnectPointType.Term1 ) ;
         public ConnectPoint Term2ConnectPoint => GetConnectPoint( (int)ConnectPointType.Term2 ) ;
-        private readonly Memento<double> mainValveLength;
-        private readonly Memento<double> diaphramLength;
-        private readonly Memento<double> diaphramDiameter;
+        //private readonly Memento<double> mainValveLength;
+        //private readonly Memento<double> diaphramLength;
+        //private readonly Memento<double> diaphramDiameter;
+        private readonly Memento<double> oper_Dim_A;
+        private readonly Memento<double> oper_Dim_B;
+        private readonly Memento<double> oper_Dim_C;
+        private readonly Memento<double> oper_Dim_D;
 
         public ActuatorControlValve( Document document ) : base( document )
         {
-            mainValveLength = CreateMementoAndSetupValueEvents( 0.0 ) ;
-            diaphramLength = CreateMementoAndSetupValueEvents( 0.0 ) ;
-            diaphramDiameter = CreateMementoAndSetupValueEvents( 0.0 ) ;
+            oper_Dim_A = CreateMementoAndSetupValueEvents(0.0) ;
+            oper_Dim_B = CreateMementoAndSetupValueEvents(0.0) ;
+            oper_Dim_C = CreateMementoAndSetupValueEvents(0.0) ;
+            oper_Dim_D = CreateMementoAndSetupValueEvents(0.0);
 
             ComponentName = "ActuatorControlValve";
         }
@@ -41,9 +46,10 @@ namespace Chiyoda.CAD.Model
             base.CopyFrom(another, storage);
 
             var entity = another as ActuatorControlValve;
-            mainValveLength.CopyFrom(entity.mainValveLength.Value);
-            diaphramLength.CopyFrom(entity.diaphramLength.Value);
-            diaphramDiameter.CopyFrom(entity.diaphramDiameter.Value);
+            oper_Dim_A.CopyFrom(entity.oper_Dim_A.Value);
+            oper_Dim_B.CopyFrom(entity.oper_Dim_B.Value);
+            oper_Dim_C.CopyFrom(entity.oper_Dim_C.Value);
+            oper_Dim_D.CopyFrom(entity.oper_Dim_D.Value);
         }
 
         public override void ChangeSizeNpsMm(int connectPointNumber, int newDiameterNpsMm)
@@ -52,9 +58,10 @@ namespace Chiyoda.CAD.Model
             var beforeDiameter = cp.Diameter.OutsideMeter;
             var afterDiameter = DiameterFactory.FromNpsMm(newDiameterNpsMm).OutsideMeter;
             var rate = afterDiameter / beforeDiameter;
-            Length *= rate;
-            DiaphramLength *= rate;
-            DiaphramDiameter *= rate;
+            Oper_Dim_A *= rate;
+            Oper_Dim_B *= rate;
+            Oper_Dim_C *= rate;
+            Oper_Dim_D *= rate;
             base.ChangeSizeNpsMm(connectPointNumber, newDiameterNpsMm);
         }
 
@@ -72,31 +79,43 @@ namespace Chiyoda.CAD.Model
             }
         }
 
-        public double Length
+        //public double Length
+        //{
+        //    get { return mainValveLength.Value; }
+        //    set
+        //    {
+        //        var term1 = Term1ConnectPoint;
+        //        var term2 = Term2ConnectPoint;
+
+        //        term1.SetPointVector(0.5 * value * Axis);
+        //        term2.SetPointVector(-0.5 * value * Axis);
+
+        //        mainValveLength.Value = value;
+        //    }
+        //}
+
+        public double Oper_Dim_A
         {
-            get { return mainValveLength.Value; }
-            set
-            {
-                var term1 = Term1ConnectPoint;
-                var term2 = Term2ConnectPoint;
-
-                term1.SetPointVector(0.5 * value * Axis);
-                term2.SetPointVector(-0.5 * value * Axis);
-
-                mainValveLength.Value = value;
-            }
+            get { return oper_Dim_A.Value; }
+            set { oper_Dim_A.Value = value; }
         }
 
-        public double DiaphramLength
+        public double Oper_Dim_B
         {
-            get { return diaphramLength.Value; }
-            set { diaphramLength.Value = value; }
+            get { return oper_Dim_B.Value; }
+            set { oper_Dim_B.Value = value; }
         }
 
-        public double DiaphramDiameter
+        public double Oper_Dim_C
         {
-            get { return diaphramDiameter.Value; }
-            set { diaphramDiameter.Value = value; }
+            get { return oper_Dim_C.Value; }
+            set { oper_Dim_C.Value = value; }
+        }
+
+        public double Oper_Dim_D
+        {
+            get { return oper_Dim_D.Value; }
+            set { oper_Dim_D.Value = value; }
         }
 
         public override Bounds GetBounds()
@@ -104,7 +123,7 @@ namespace Chiyoda.CAD.Model
             var bounds = new Bounds((Vector3)Origin, Vector3.zero);
             bounds.Encapsulate((Vector3)Term1ConnectPoint.Point);
             bounds.Encapsulate((Vector3)Term2ConnectPoint.Point);
-            bounds.Encapsulate((Vector3)(SecondAxis * DiaphramLength));
+            bounds.Encapsulate((Vector3)(SecondAxis * Oper_Dim_A));
 
             var flowRadius = Diameter / 2;
             bounds.Encapsulate((Vector3)(SecondAxis * flowRadius));
@@ -112,7 +131,7 @@ namespace Chiyoda.CAD.Model
             bounds.Encapsulate((Vector3)(ThirdAxis * flowRadius));
             bounds.Encapsulate((Vector3)(-ThirdAxis * flowRadius));
 
-            var diaphramRadius = DiaphramDiameter / 2;
+            var diaphramRadius = Oper_Dim_A / 2;
             bounds.Encapsulate((Vector3)(Axis * diaphramRadius));
             bounds.Encapsulate((Vector3)(-Axis * diaphramRadius));
             bounds.Encapsulate((Vector3)(ThirdAxis * diaphramRadius));

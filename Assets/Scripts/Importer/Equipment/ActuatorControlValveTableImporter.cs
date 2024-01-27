@@ -19,15 +19,14 @@ namespace Importer.Equipment
 
         public override (Chiyoda.CAD.Model.PipingPiece piece, Vector3d origin, Quaternion rot) Generate(Document doc, string name, bool createNozzle)
         {
-            Debug.Log("--Generate name: " + name);
             var row = FindPattern(name);
             var cells = TableReader.Row2Array(row);
             var valve = doc.CreateEntity<ActuatorControlValve>();
 
-            valve.Length = double.Parse(cells[6]) / 1000.0;
-            valve.Diameter = double.Parse(cells[7]) / 1000.0;
-            valve.DiaphramLength = double.Parse(cells[8]) / 1000.0;
-            valve.DiaphramDiameter = double.Parse(cells[9]) / 1000.0;
+            valve.Oper_Dim_A = double.Parse(cells[6]) / 1000.0;
+            valve.Oper_Dim_B = double.Parse(cells[7]) / 1000.0;
+            valve.Oper_Dim_C = double.Parse(cells[8]) / 1000.0;
+            valve.Oper_Dim_D = double.Parse(cells[9]) / 1000.0;
 
             return (valve, ParseOrigin(cells), ParseAngleAxis(cells));
         }

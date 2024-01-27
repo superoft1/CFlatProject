@@ -26,7 +26,6 @@ namespace Importer.BlockPattern.Equipment
 
         public static void Import(Action<Edge> onFinish)
         {
-            Debug.Log("--Import finish");
             var bp = BlockPatternFactory.CreateBlockPattern(BlockPatternType.Type.ActuatorControlValve);
             _dragging = ActuatorControlValveImport("ACV001", bp, onFinish);
         }
@@ -70,11 +69,9 @@ namespace Importer.BlockPattern.Equipment
 
         public static Chiyoda.CAD.Topology.BlockPattern ActuatorControlValveImport(string id, Chiyoda.CAD.Topology.BlockPattern bp, Action<Edge> onFinish = null)
         {
-            Debug.Log("--step 1");
             var dataSet = PipingPieceDataSet.GetPipingPieceDataSet();
             var instrumentTable = PipingPieceTableFactory.Create(bp.Type, dataSet);
             var (instrument, origin, rot) = instrumentTable.Generate(bp.Document, id, createNozzle: false);
-            Debug.Log("--step 2");
             var curDoc = DocumentCollection.Instance.Current ?? DocumentCollection.Instance.CreateNew();
 
             bp.LocalCod = new LocalCodSys3d(origin, rot, false);
@@ -83,12 +80,10 @@ namespace Importer.BlockPattern.Equipment
             LeafEdgeCodSysUtils.LocalizePRVComponent(leafEdge, Vector3d.zero, Vector3d.down, Vector3d.left);
             bp.AddEdge(leafEdge);
             curDoc.CreateHalfVerticesAndMakePairs(leafEdge);
-            Debug.Log("--step 3");
 
             var vertices = leafEdge.Vertices.ToList();
             vertices[0].Flow = HalfVertex.FlowType.FromAnotherToThis;
             vertices[1].Flow = HalfVertex.FlowType.FromThisToAnother;
-            Debug.Log("--step 4");
             onFinish?.Invoke(bp);
             return bp;
         }
