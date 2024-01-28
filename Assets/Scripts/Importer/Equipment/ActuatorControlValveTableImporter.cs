@@ -27,6 +27,7 @@ namespace Importer.Equipment
             valve.Oper_Dim_B = double.Parse(cells[7]) / 1000.0;
             valve.Oper_Dim_C = double.Parse(cells[8]) / 1000.0;
             valve.Oper_Dim_D = double.Parse(cells[9]) / 1000.0;
+            valve.TermLenght = 2.0f;
 
             return (valve, ParseOrigin(cells), ParseAngleAxis(cells));
         }

@@ -17,9 +17,7 @@ namespace Chiyoda.CAD.Model
 
         public ConnectPoint Term1ConnectPoint => GetConnectPoint( (int)ConnectPointType.Term1 ) ;
         public ConnectPoint Term2ConnectPoint => GetConnectPoint( (int)ConnectPointType.Term2 ) ;
-        //private readonly Memento<double> mainValveLength;
-        //private readonly Memento<double> diaphramLength;
-        //private readonly Memento<double> diaphramDiameter;
+
         private readonly Memento<double> oper_Dim_A;
         private readonly Memento<double> oper_Dim_B;
         private readonly Memento<double> oper_Dim_C;
@@ -65,39 +63,27 @@ namespace Chiyoda.CAD.Model
             base.ChangeSizeNpsMm(connectPointNumber, newDiameterNpsMm);
         }
 
-        public double Diameter
+        public double TermLenght
         {
             get { return Term1ConnectPoint.Diameter.OutsideMeter; }
 
             set
             {
-                var term1 = Term1ConnectPoint;
-                var term2 = Term2ConnectPoint;
+                Term1ConnectPoint.Diameter = DiameterFactory.FromOutsideMeter(value); ;
+                Term2ConnectPoint.Diameter = Term1ConnectPoint.Diameter;
 
-                term1.Diameter = DiameterFactory.FromOutsideMeter(value); ;
-                term2.Diameter = term1.Diameter;
+                ApplyTermConnectPoint();
             }
         }
-
-        //public double Length
-        //{
-        //    get { return mainValveLength.Value; }
-        //    set
-        //    {
-        //        var term1 = Term1ConnectPoint;
-        //        var term2 = Term2ConnectPoint;
-
-        //        term1.SetPointVector(0.5 * value * Axis);
-        //        term2.SetPointVector(-0.5 * value * Axis);
-
-        //        mainValveLength.Value = value;
-        //    }
-        //}
 
         public double Oper_Dim_A
         {
             get { return oper_Dim_A.Value; }
-            set { oper_Dim_A.Value = value; }
+            set 
+            { 
+                oper_Dim_A.Value = value;
+                ApplyTermConnectPoint();
+            }
         }
 
         public double Oper_Dim_B
@@ -118,20 +104,26 @@ namespace Chiyoda.CAD.Model
             set { oper_Dim_D.Value = value; }
         }
 
+        private void ApplyTermConnectPoint()
+        {
+            Term1ConnectPoint.SetPointVector(new Vector3d(-TermLenght / 2, -Oper_Dim_A + 0.3f, 0.26f));
+            Term2ConnectPoint.SetPointVector(new Vector3d(TermLenght / 2, -Oper_Dim_A + 0.3f, 0.26f));
+        }
+
         public override Bounds GetBounds()
         {
             var bounds = new Bounds((Vector3)Origin, Vector3.zero);
             bounds.Encapsulate((Vector3)Term1ConnectPoint.Point);
             bounds.Encapsulate((Vector3)Term2ConnectPoint.Point);
-            bounds.Encapsulate((Vector3)(SecondAxis * Oper_Dim_A));
+            bounds.Encapsulate((Vector3)(SecondAxis * TermLenght));
 
-            var flowRadius = Diameter / 2;
+            var flowRadius = TermLenght / 2;
             bounds.Encapsulate((Vector3)(SecondAxis * flowRadius));
             bounds.Encapsulate((Vector3)(-SecondAxis * flowRadius));
             bounds.Encapsulate((Vector3)(ThirdAxis * flowRadius));
             bounds.Encapsulate((Vector3)(-ThirdAxis * flowRadius));
 
-            var diaphramRadius = Oper_Dim_A / 2;
+            var diaphramRadius = (Oper_Dim_B + Oper_Dim_C) / 2;
             bounds.Encapsulate((Vector3)(Axis * diaphramRadius));
             bounds.Encapsulate((Vector3)(-Axis * diaphramRadius));
             bounds.Encapsulate((Vector3)(ThirdAxis * diaphramRadius));

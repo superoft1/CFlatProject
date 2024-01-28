@@ -18,16 +18,22 @@ namespace Chiyoda.CAD.Body
         GameObject mainOperation;
 
         [SerializeField]
-        GameObject partA;
+        GameObject operationConnector;
 
         [SerializeField]
-        GameObject partB;
+        GameObject cylinder1;
 
         [SerializeField]
-        GameObject partC;
+        GameObject cylinder2;
 
         [SerializeField]
-        GameObject partD;
+        GameObject cube1;
+
+        [SerializeField]
+        GameObject cube2;
+
+        [SerializeField]
+        GameObject head;
 
         public GameObject MainValve
         {
@@ -68,55 +74,81 @@ namespace Chiyoda.CAD.Body
             }
         }
 
-        public GameObject PartA
+        public GameObject OperationConnector
         {
             get
             {
-                return partA;
+                return operationConnector;
             }
 
             set
             {
-                partA = value;
+                operationConnector = value;
             }
         }
 
-        public GameObject PartB
+        public GameObject Cylinder1
         {
             get
             {
-                return partB;
+                return cylinder1;
             }
 
             set
             {
-                partB = value;
+                cylinder1 = value;
             }
         }
 
-        public GameObject PartC
+        public GameObject Cylinder2
         {
             get
             {
-                return partC;
+                return cylinder2;
             }
 
             set
             {
-                partC = value;
+                cylinder2 = value;
             }
         }
 
-        public GameObject PartD
+        public GameObject Cube1
         {
             get
             {
-                return partD;
+                return cube1;
             }
 
             set
             {
-                partD = value;
+                cube1 = value;
+            }
+        }
+
+        public GameObject Cube2
+        {
+            get
+            {
+                return cube2;
+            }
+
+            set
+            {
+                cube2 = value;
+            }
+        }
+
+        public GameObject Head
+        {
+            get
+            {
+                return head;
+            }
+
+            set
+            {
+                head = value;
             }
         }
     }
